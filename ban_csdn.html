@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>访问被禁止 - CSDN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .animate-bounce-slow {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-5%);
+                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+            }
+            50% {
+                transform: translateY(0);
+                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="glass-effect w-full max-w-md p-8 rounded-2xl shadow-xl text-center border border-gray-200">
+        
+        <!-- Icon Section -->
+        <div class="mb-6 flex justify-center">
+            <div class="relative">
+                <div class="absolute inset-0 bg-red-100 rounded-full animate-ping opacity-75"></div>
+                <div class="relative bg-red-100 p-4 rounded-full">
+                    <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Text -->
+        <h1 class="text-2xl font-bold text-gray-800 mb-2">访问受限</h1>
+        <div class="inline-block bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-6 border border-red-100">
+            csdn.net
+        </div>
+
+        <p class="text-gray-600 mb-8 leading-relaxed">
+            根据网络安全策略，您当前所在的网络环境已禁止访问 CSDN 网站。如果您认为这是一个错误，请联系网络管理员。
+        </p>
+
+        <!-- Divider -->
+        <div class="border-t border-gray-100 my-6"></div>
+
+        <!-- Action Buttons -->
+        <div class="space-y-3">
+            <button onclick="window.history.back()" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-2.5 px-4 rounded-lg transition duration-200 flex items-center justify-center group">
+                <svg class="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                返回上一页
+            </button>
+            
+            <a href="#" onclick="alert('请发送邮件至 seimo@seimo.cn'); return false;" class="block w-full bg-white hover:bg-gray-50 text-gray-700 font-medium py-2.5 px-4 rounded-lg border border-gray-300 transition duration-200">
+                联系管理员
+            </a>
+        </div>
+
+        <!-- Footer Info -->
+        <div class="mt-8 text-xs text-gray-400">
+            <p>Error Code: 403 Forbidden</p>
+            <p class="mt-1">Policy ID: NET-SEC-BLOCK-092</p>
+        </div>
+    </div>
+
+</body>
+</html>
